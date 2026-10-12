@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 def load_tokens(server_name):
     try:
-        if server_name == "IND":
+        if server_name == "ind":
             path = "token_ind.json"
         elif server_name in {"BR", "US", "SAC", "NA"}:
             path = "token_br.json"
@@ -31,7 +31,7 @@ def load_tokens(server_name):
         return []
 
 def get_url(server_name):
-    if server_name == "IND":
+    if server_name == "ind":
         return "https://client.ind.freefiremobile.com/GetPlayerPersonalShow"
     elif server_name in {"BR", "US", "SAC", "NA"}:
         return "https://client.us.freefiremobile.com/GetPlayerPersonalShow"
